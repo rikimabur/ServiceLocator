@@ -1,0 +1,14 @@
+﻿Service Locator là một design pattern thông dụng cho phép tách rời (decouple) 
+một class với các dependency (hay được gọi là service) của nó. Service Locator có 
+thể coi là một đối tượng trung gian trong việc liên kết class và các dependency.
+Giới thiệu
+Service-Locator-Pattern
+Serive Locator pattern mô tả cách để đăng ký và lấy các dependency để sử dụng. Bạn có thể thấy pattern này là một dạng kết hợp của Factory pattern và Dependency Injection pattern. Một số lợi ích mà pattern này đem lại:
+– Tách rời một class với các dependency của nó, nhờ đó có thể dễ dàng thay thế các dependency.
+– Các dependency sẽ được sử dụng dưới dạng interface, đảm bảo không sử dụng các class cụ thể (concrete)của dependency.
+– Dễ dàng test các class trong môi trường cách ly (isolation), không phụ thuộc vào các dependency.
+– Các đoạn code để tạo, quản lý dependency được tách riêng ra khỏi các class.
+– Ứng dụng có thể được chia ra các phần ít bị ràng buộc (loosely coupled) với nhau.
+Mặc dù có nhiều lợi ích rõ ràng như vậy nhưng pattern cũng có một số hạn chế và nhiều ý kiến trái chiều.
+Tuy nhiên bài viết này chỉ tập trung vào giới thiệu và minh họa cơ chế làm việc của nó.
+link: https://yinyangit.wordpress.com/2015/09/06/design-pattern-vi-du-ve-service-locator-trong-c/

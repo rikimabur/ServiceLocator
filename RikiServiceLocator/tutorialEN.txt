@@ -1,0 +1,50 @@
+Maybe the term "Service Locator" is new to you but it's not hard to understand. 
+This article assumes a basic knowledge of de-coupled architecture. An understanding of various design patterns 
+will help you to understand this better.
+
+We know those software components are subject to change depending on the business. 
+Since software is for business and the reverse is not always true. If so, then we have to keep in mind that,
+when change comes, our application can adapt smoothly or at least by giving only a little trouble.
+
+This is the advantage of de-coupled architecture and every software organization expects it in their application.
+
+Fine, we have learned the concept of de-coupling, now how to do it? There are many ways,
+the truth to be told is “It will take a few hours to understand de-coupling but will take a few years to master it”.
+One of the nice traditional approaches to implement de-coupled is by IoC. IoC stands for Inversion of Control.
+
+The pattern suggests not creating an object of one class within another class,
+if we do then it will be tightly dependent on each other.
+
+So, here we will invert the traditional communication of two objects and that results in the name.
+
+Ok, again we can implement IoC in two ways, one using a Service Locator and another is Dependency Injection.
+
+Dependency Injection
+
+So in this example what we will implement is one part of IoC or Inversion of Control.
+The Service Locator is a pattern by which we can reduce 
+the dependency of one object on another that we will see shortly and Dependency injection (DI) is another smart 
+solution for the same problem. Anyway we are not interested in talking about DI here.
+
+Again we can implement a Service Locator in one of the following two ways. 
+
+Service Locator in two ways
+
+One is a strong type and another one is a generic type. In this article we will implement both of them. 
+
+Fine, now let's understand theory and implementation of service location. Have a look at the following diagram. 
+The classA is consuming both ServiceA and ServiceB and for that we
+are creating an instance of ServiceA and ServiceB within ClassA and this is the example of Dependency.
+Dependency
+Now the solution is something like this. We have implemented one layer to consume the service that is nothing but a service locator. Now, ClassA does not know about the Object creation mechanism to consume ServiceA and ServiceB.
+consume ServiceA and ServiceB
+So, this pattern helps to locate a service and hence the name. The following is a summary of the objective of a Service locator.
+You want to decouple your classes from their dependencies so that these dependencies can be replaced or updated with little or no change to the classes.
+You want to write logic that depends on classes whose concrete implementation is not known at compile time.
+You want to be able to test your classes in isolation, without the dependencies.
+You do not want the logic that locates and manages the dependencies to be in your classes.
+You want to divide your application into loosely coupled modules that can be independently developed, tested, versioned and deployed.
+Now, let me disclose the fact. It's a common question, “Is a service locator really a good pattern?”.
+Many say yes, many no and its anti-pattern means it has its own disadvantages and advantages so we should avoid it.
+Anyway we will not spend more words on this topic, in another article I am will present it. 
+link: https://www.c-sharpcorner.com/UploadFile/dacca2/service-locator-design-pattern/
